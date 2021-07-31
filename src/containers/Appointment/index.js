@@ -1,6 +1,7 @@
 import React, { useMemo, useCallback } from "react";
 import { connect } from "react-redux";
 import moment from "moment";
+import "./appointment.css";
 
 import { useParams, useHistory, Link, Redirect } from "react-router-dom";
 
@@ -59,9 +60,9 @@ const Appointment = ({ appointments }) => {
   }
 
   return (
-    <div className="AppointmentWrapper">
-      <div className="navWrapper">
-        <section className="nav">
+    <div className="row">
+      <div className="row__header">
+        <article>
           <div onClick={() => changeDate(gotoDate(-1))} className="button">
             <img alt="left button" />️
           </div>
@@ -69,18 +70,18 @@ const Appointment = ({ appointments }) => {
           <div onClick={() => changeDate(gotoDate(1))} className="button">
             <img alt="right button" />️
           </div>
-        </section>
+        </article>
       </div>
-      <section>
+      <section className="row__timeslots">
         <div>
-          <div className="mx-3">
-            <h2 className="mt-5">Select A Time Slot</h2>
+          <div>
+            <h2>Select A Time Slot</h2>
           </div>
         </div>
         <div>
           <div>
             {TIME_SLOT.map((time) => (
-              <Link key={time} to={`${time}/details/`}>
+              <Link className="row__item" key={time} to={`${time}/details/`}>
                 <button className={bookingData[time] && "booked"}>
                   {formatTime(time)} to {formatTime(++time)}
                 </button>

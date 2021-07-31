@@ -1,0 +1,37 @@
+.row__header {
+  text-align: center;
+}
+
+.row__timeslots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booked {
+  background-color: red;
+}
+
+.row__item {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 1rem;
+  place-items: center;
+}
+
+button {
+  display: inline-block;
+  width: 100%;
+  padding: 1.5vw 25vw;
+  font-weight: 700;
+  background-color: #002240;
+  box-shadow: none;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
