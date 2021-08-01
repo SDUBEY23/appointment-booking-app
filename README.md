@@ -5,6 +5,7 @@ An application which allows the user to select date and available appointment ti
 ## How to run
 
 You will need to have Node **10.16.0** or later on your local development machine. You can use [nvm](https://github.com/creationix/nvm#installation) (macOS/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) to switch Node versions between different projects.
+Clone this repository in your Local machine or download the Zip file and then execute the below mentioned steps
 
 ### First install all dependencies
 
