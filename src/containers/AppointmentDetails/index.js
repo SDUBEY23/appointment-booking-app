@@ -62,7 +62,6 @@ const AppointmentDetails = ({ appointments, updateAppointment }) => {
             placeholder="First Name"
             onChange={updateFormData}
             data-type={FIRST_NAME}
-            isInvalid={userDetails[FIRST_NAME] === ""}
             value={userDetails[FIRST_NAME]}
           />
 
@@ -73,7 +72,6 @@ const AppointmentDetails = ({ appointments, updateAppointment }) => {
             aria-describedby="Last Name"
             data-type={LAST_NAME}
             onChange={updateFormData}
-            isInvalid={userDetails[LAST_NAME] === ""}
             value={userDetails[LAST_NAME]}
           />
           <input
@@ -83,7 +81,6 @@ const AppointmentDetails = ({ appointments, updateAppointment }) => {
             aria-describedby="First Name"
             data-type={MOBILE_NUMBER}
             onChange={updateFormData}
-            isInvalid={userDetails[MOBILE_NUMBER] === ""}
             value={userDetails[MOBILE_NUMBER]}
           />
         </div>
