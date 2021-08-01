@@ -39,3 +39,7 @@ Once the app is compiled and bundled successfully you should see the screen in y
 ### Implementation
 
 The app is implemented using ReactJS. The application also uses Redux for state management and uses Material UI and ustom CSS for styling. Material Icons are used for displaying the icons in the application. The app is not completely responsive but should look good on all screen sizes.
+
+### Deployment
+
+The application is deployed on Netlify. You can view the view app on - https://book-appointment.netlify.app/
