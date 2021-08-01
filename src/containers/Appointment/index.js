@@ -2,11 +2,10 @@ import React, { useMemo, useCallback } from "react";
 import { connect } from "react-redux";
 import moment from "moment";
 import "./appointment.css";
-
 import { useParams, useHistory, Link, Redirect } from "react-router-dom";
-
-// import LeftArrow from "static/icons/left.png";
-// import RightArrow from "static/icons/right.png";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import { Badge, IconButton } from "@material-ui/core";
 
 const TIME_SLOT = [9, 10, 11, 12, 13, 14, 15, 16];
 
@@ -62,13 +61,35 @@ const Appointment = ({ appointments }) => {
   return (
     <div className="row">
       <div className="row__header">
-        <article>
+        <div>
+          <h1 className="display-4">Let's Connect! 🗓️</h1>
+          <hr className="my-2" />
+          <p className="lead">
+            Tap or click on an available timeslot below to book an appointment.
+          </p>
+          <p>
+            Time slots marked in <span className="red-text">red</span> are
+            already booked.
+          </p>
+          <h2>Select Date</h2>
+        </div>
+        <article className="row__date">
           <div onClick={() => changeDate(gotoDate(-1))} className="button">
-            <img alt="left button" />️
+            <IconButton>
+              <Badge>
+                <ArrowBackIosIcon style={{ color: "#111" }} />
+              </Badge>
+            </IconButton>
+            ️
           </div>
           <h2>{currentDate}</h2>
           <div onClick={() => changeDate(gotoDate(1))} className="button">
-            <img alt="right button" />️
+            <IconButton>
+              <Badge>
+                <ArrowForwardIosIcon style={{ color: "#111" }} />
+              </Badge>
+            </IconButton>
+            ️
           </div>
         </article>
       </div>

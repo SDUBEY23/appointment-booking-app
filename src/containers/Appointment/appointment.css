@@ -1,5 +1,27 @@
+.row {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .row__header {
   text-align: center;
+  margin-top: 5vh;
+}
+
+.row__header h1,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.red-text {
+  color: #e50914;
+}
+
+.row__date {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 
 .row__timeslots {
@@ -9,8 +31,8 @@
   align-items: center;
 }
 
-.booked {
-  background-color: red;
+.row__timeslots .booked {
+  background-color: #e50914;
 }
 
 .row__item {
@@ -20,7 +42,7 @@
   place-items: center;
 }
 
-button {
+.row__timeslots button {
   display: inline-block;
   width: 100%;
   padding: 1.5vw 25vw;
@@ -30,6 +52,7 @@ button {
   border: none;
   border-radius: 0.25rem;
   color: #fff;
+  cursor: pointer;
 }
 
 a {

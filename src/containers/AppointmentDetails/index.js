@@ -1,10 +1,8 @@
-import { Grid, TextField } from "@material-ui/core";
 import React, { useState, useMemo } from "react";
 import { connect } from "react-redux";
-
 import { useParams, useHistory } from "react-router-dom";
-
 import { updateAppointment } from "../../action";
+import "./appointmentDetails.css";
 
 const FIRST_NAME = "firstName";
 const LAST_NAME = "lastName";
@@ -55,43 +53,48 @@ const AppointmentDetails = ({ appointments, updateAppointment }) => {
   };
 
   return (
-    <section>
-      <Grid item>
-        <input
-          type="text"
-          placeholder="First Name"
-          onChange={updateFormData}
-          data-type={FIRST_NAME}
-          isInvalid={userDetails[FIRST_NAME] === ""}
-          value={userDetails[FIRST_NAME]}
-        />
-        <input
-          type="text"
-          placeholder="Last Name"
-          aria-label="Last Name"
-          aria-describedby="Last Name"
-          data-type={LAST_NAME}
-          onChange={updateFormData}
-          isInvalid={userDetails[LAST_NAME] === ""}
-          value={userDetails[LAST_NAME]}
-        />
-        <input
-          type="number"
-          placeholder="Mobile Number"
-          aria-label="First Name"
-          aria-describedby="First Name"
-          data-type={MOBILE_NUMBER}
-          onChange={updateFormData}
-          isInvalid={userDetails[MOBILE_NUMBER] === ""}
-          value={userDetails[MOBILE_NUMBER]}
-        />
-      </Grid>
-      <button onClick={() => history.goBack()} variant="secondary">
-        Cancel
-      </button>
+    <div>
+      <h1 className="header">Please Enter Your Contact Details</h1>
+      <div className="detail">
+        <div className="detail__inputsection">
+          <input
+            type="text"
+            placeholder="First Name"
+            onChange={updateFormData}
+            data-type={FIRST_NAME}
+            isInvalid={userDetails[FIRST_NAME] === ""}
+            value={userDetails[FIRST_NAME]}
+          />
 
-      <button onClick={onClickSave}>Save</button>
-    </section>
+          <input
+            type="text"
+            placeholder="Last Name"
+            aria-label="Last Name"
+            aria-describedby="Last Name"
+            data-type={LAST_NAME}
+            onChange={updateFormData}
+            isInvalid={userDetails[LAST_NAME] === ""}
+            value={userDetails[LAST_NAME]}
+          />
+          <input
+            type="text"
+            placeholder="Mobile Number"
+            aria-label="First Name"
+            aria-describedby="First Name"
+            data-type={MOBILE_NUMBER}
+            onChange={updateFormData}
+            isInvalid={userDetails[MOBILE_NUMBER] === ""}
+            value={userDetails[MOBILE_NUMBER]}
+          />
+        </div>
+        <div className="detail__buttons">
+          <button onClick={() => history.goBack()} variant="secondary">
+            Cancel
+          </button>
+          <button onClick={onClickSave}>Save</button>
+        </div>
+      </div>
+    </div>
   );
 };
 
