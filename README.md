@@ -1,6 +1,6 @@
 # Appointment-Booking-App
 
-An application which allows the user to select date and available appointment time slots. User can book the the available available time by simply entering First Name, Last Name and Mobile Number.
+An application which allows the user to select date and available appointment time slots. User can book the available time by simply entering First Name, Last Name and Mobile Number.
 
 ## How to run
 
